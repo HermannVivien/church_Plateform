@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+vendor/
+.pnpm-store/
+
+# Builds
+.next/
+dist/
+build/
+out/
+.turbo/
+
+# Env
+.env
+.env.local
+.env.*.local
+!.env.example
+!.env.testing
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Laravel
+apps/api/storage/*.key
+apps/api/storage/logs/*
+apps/api/storage/framework/cache/*
+apps/api/storage/framework/sessions/*
+apps/api/storage/framework/views/*
+apps/api/bootstrap/cache/*
+!apps/api/storage/logs/.gitkeep
+!apps/api/storage/framework/cache/.gitkeep
+!apps/api/storage/framework/sessions/.gitkeep
+!apps/api/storage/framework/views/.gitkeep
+!apps/api/bootstrap/cache/.gitkeep
+
+# Tests / coverage
+coverage/
+.phpunit.result.cache
+
+# Docker
+docker-compose.override.yml
+
+# Skill packages (non liés au projet)
+*.skill
+*.zip
+

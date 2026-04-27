@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Modules\Auth\DTOs;
+
+use Illuminate\Http\Request;
+
+readonly class LoginDTO
+{
+    public function __construct(
+        public string $email,
+        public string $password,
+        public bool $remember = false,
+    ) {}
+
+    public static function fromRequest(Request $request): self
+    {
+        return new self(
+            email: $request->validated('email'),
+            password: $request->validated('password'),
+            remember: $request->boolean('remember'),
+        );
+    }
+}
